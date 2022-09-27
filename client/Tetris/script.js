@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [width, width + 1, width + 2, width + 3]
   ];
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
+
   let currentPosition = 4;
   const currentRotation = 0;
 
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let current = theTetrominoes[random][currentRotation];
   // draw the tetromino
   function draw() {
-    current.forEach((index) => {
+    current.forEach(index => {
       squares[currentPosition + index].classList.add('tetromino');
       squares[currentPosition + index].style.backgroundColor = colors[random];
     });
@@ -162,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // add functionality to the button
   startBtn.addEventListener('click', () => {
     if (timerId) {
+      clearInterval(timerId)
       timerId = null;
     } else {
       draw();
