@@ -315,7 +315,7 @@ form label {
       background-color: rgba(79, 79, 188, 0.7);
         flex: 1 2 auto;
         margin: 1rem;
-        align-items: center;
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
     }
